@@ -300,7 +300,7 @@
   </div>
 
   <div class="content contentHeader double">
-    <div class="doubleLeft">
+      <div class="doubleLeft">
       <div class="row up-1">
         <div class="badge connected">
           <div class="live"></div>
@@ -362,8 +362,7 @@
         </li>
       </div>
     </div>
-
-    <div class="doubleRight">
+      <div class="doubleRight">
       <div class="row up-7 title">
         <h2>Transactions</h2>
         <a class="absolute-bottom-h2 ic-24ar ic-info" data-modal-show="modalHelp"></a>
@@ -434,7 +433,7 @@
     </div>
   </div>
 
-  <div id="modalSettings" class="screenModalRight">
+    <div id="modalSettings" class="screenModalRight">
     <div class="header modalHeader">
       <a class="ic-title-close" data-modal-hide="modalSettings"></a>
       <h2 class="lh-56" data-symbol="">Settings</h2>
@@ -583,8 +582,7 @@
       </div>
     </div>
   </div>
-
-  <div id="modalCoin" class="screenModalFull">
+    <div id="modalCoin" class="screenModalFull">
     <div id="gw-coin-balance-template" style="display:none">
       <li class="expand-item ic-qr">
         <div class="row">
@@ -930,8 +928,7 @@
       </div>
     </div>
   </div>
-
-  <div id="modalWallets" class="screenModalFull z-70">
+    <div id="modalWallets" class="screenModalFull z-70">
     <div class="header modalHeader">
       <a class="ic-title-close" data-modal-hide="modalWallets"></a>
       <h2 class="lh-56">Wallets</h2>
@@ -982,7 +979,7 @@
     </div>
   </div>
 
-  <div id="modalDepositCoins" class="screenModalDynamic">
+    <div id="modalDepositCoins" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalDepositCoins"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -1009,7 +1006,8 @@
             </div>
           </li>
         </div>
-        <div data-view="main">
+
+                <div data-view="main">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Deposit</h2>
           </div>
@@ -1027,7 +1025,7 @@
             </div>
           </div>
         </div>
-        <div data-view="selectWallet">
+                <div data-view="selectWallet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Deposit to Wallet</h2>
           </div>
@@ -1059,7 +1057,7 @@
             </ul>
           </div>
         </div>
-        <div data-view="deposit">
+                <div data-view="deposit">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Deposit <i data-name>Ethereum</i></h2>
           </div>
@@ -1155,11 +1153,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
-
-  <div id="modalExchangeCoins" class="screenModalDynamic">
+  </div> 
+    <div id="modalExchangeCoins" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalExchangeCoins"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -1205,7 +1203,8 @@
             </div>
           </li>
         </div>
-        <div data-view="firstdeposit">
+
+                <div data-view="firstDeposit">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Insufficient funds</h2>
           </div>
@@ -1225,7 +1224,7 @@
             </a>
           </div>
         </div>
-        <div data-view="beet">
+                <div data-view="beet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Accept in Beet</h2>
           </div>
@@ -1241,12 +1240,12 @@
             <p>If suddenly Beet is not turned on, then unlock it and click on the Resend button.</p>
           </div>
           <div class="row up-6">
-            <a class="button">
-              <h3>Resend Request</h3>
+            <a class="button" data-beet-send-button>
+              <h3>Send Request</h3>
             </a>
           </div>
         </div>
-        <div data-view="insufficient">
+                <div data-view="insufficient">
           <div data-view-title="" style="display:none">
             <h2 class="lh-56">Insufficient funds</h2>
           </div>
@@ -1309,7 +1308,7 @@
             </a>
           </div>
         </div>
-        <div data-view="success">
+                <div data-view="success">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Success</h2>
           </div>
@@ -1386,7 +1385,7 @@
             </a>
           </div>
         </div>
-        <div data-view="fail">
+                <div data-view="fail">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Failed</h2>
           </div>
@@ -1414,7 +1413,7 @@
             </a>
           </div>
         </div>
-        <div data-view="main">
+                <div data-view="main">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Asset for Sell</h2>
           </div>
@@ -1432,7 +1431,7 @@
             </div>
           </div>
         </div>
-        <div data-view="selectSellWallet">
+                <div data-view="selectSellWallet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Sell from Wallet</h2>
           </div>
@@ -1463,7 +1462,7 @@
             <ul class="items items-1 ic-24b ic-arrow-right-a" data-sell-wallets></ul>
           </div>
         </div>
-        <div data-view="selectBuyCoin">
+                <div data-view="selectBuyCoin">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Asset to Buy</h2>
           </div>
@@ -1481,7 +1480,7 @@
             </div>
           </div>
         </div>
-        <div data-view="selectBuyWallet">
+                <div data-view="selectBuyWallet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Buy to Wallet</h2>
           </div>
@@ -1512,7 +1511,7 @@
             <ul class="items items-1 ic-24b ic-arrow-right-a" data-buy-wallets></ul>
           </div>
         </div>
-        <div data-view="confirm">
+                <div data-view="confirm">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Confirm Transaction</h2>
           </div>
@@ -1531,12 +1530,15 @@
             <input data-password-input type="text" placeholder="Password" class="input row-wide hide-password" spellcheck="false" />
           </div>
           <div class="row up-4">
-            <a data-exchange-button class="button-deep-normal row-wide">
+            <a class="button row-half left margin0" data-multi-view-modal-show="modalExchangeCoins" data-view-show2="beet" data-modal-arg>
+              <h3>Beet</h3>
+            </a>
+            <a data-exchange-button data-modal-arg class="button-deep row-half right margin0">
               <h3>Confirm</h3>
             </a>
           </div>
         </div>
-        <div data-view="exchange">
+                <div data-view="exchange">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Sell <i data-sell-symbol>BTC</i> <i class="text-grey">⇄</i> Get <i data-buy-symbol>ETH</i> </h2>
           </div>
@@ -1626,11 +1628,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
-
-  <div id="modalWithdrawCoins" class="screenModalDynamic">
+  </div> 
+    <div id="modalWithdrawCoins" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalWithdrawCoins"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -1657,7 +1659,29 @@
             </div>
           </li>
         </div>
-        <div data-view="verify">
+
+	        <div data-view="beet">
+          <div data-view-title style="display:none">
+            <h2 class="lh-56">Accept in Beet</h2>
+          </div>
+          <div class="modal-state">
+            <img src="i/ic_beet.png" class="svg-media" />
+          </div>
+          <div class="row up-1">
+            <h3 class="text-center">Accept Transaction in Beet</h3>
+          </div>
+          <div class="row up-4">
+            <p>Please make sure that Beet is open on your computer and unlocked.</p>
+            <p>Beet private keys are locally stored and encrypted, protected by a wallet master password.</p>
+            <p>If suddenly Beet is not turned on, then unlock it and click on the Resend button.</p>
+          </div>
+          <div class="row up-6">
+            <a class="button" data-beet-send-button>
+              <h3>Send Request</h3>
+            </a>
+          </div>
+        </div>
+                <div data-view="verify">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Confirm Withdraw</h2>
           </div>
@@ -1728,8 +1752,7 @@
             </a>
           </div>
         </div>
-
-        <div data-view="confirm">
+                <div data-view="confirm">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Confirm Transaction</h2>
           </div>
@@ -1748,13 +1771,15 @@
             <input data-password-input type="text" placeholder="Password" class="input row-wide hide-password" spellcheck="false" />
           </div>
           <div class="row up-4">
-            <a data-withdraw-button class="button-deep-normal row-wide">
+<!--             <a class="button row-half left margin0" data-multi-view-modal-show="modalWithdrawCoins" data-view-show2="beet" data-modal-arg>
+              <h3>Beet</h3>
+            </a> -->
+            <a data-withdraw-button data-modal-arg class="button-deep row-wide">
               <h3>Confirm</h3>
             </a>
           </div>
         </div>
-
-        <div data-view="firstdeposit">
+                <div data-view="firstDeposit">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Insufficient funds</h2>
           </div>
@@ -1774,7 +1799,7 @@
             </a>
           </div>
         </div>
-        <div data-view="insufficient">
+                <div data-view="insufficient">
           <div data-view-title="" style="display:none">
             <h2 class="lh-56">Insufficient funds</h2>
           </div>
@@ -1837,7 +1862,7 @@
             </a>
           </div>
         </div>
-        <div data-view="success">
+                <div data-view="success">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Success</h2>
           </div>
@@ -1899,7 +1924,7 @@
             </a>
           </div>
         </div>
-        <div data-view="fail">
+                <div data-view="fail">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Failed</h2>
           </div>
@@ -1924,7 +1949,7 @@
             </a>
           </div>
         </div>
-        <div data-view="main">
+                <div data-view="main">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Withdraw</h2>
           </div>
@@ -1942,7 +1967,7 @@
             </div>
           </div>
         </div>
-        <div data-view="selectWallet">
+                <div data-view="selectWallet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Withdraw from Wallet</h2>
           </div>
@@ -1974,7 +1999,7 @@
             </ul>
           </div>
         </div>
-        <div data-view="withdraw">
+                <div data-view="withdraw">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Withdraw <i data-name>Ethereum</i></h2>
           </div>
@@ -2060,11 +2085,12 @@
             </a>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
+  </div> 
 
-  <div id="modalTransactionTransfer" class="screenModalDynamic">
+    <div id="modalTransactionTransfer" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalTransactionTransfer"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2182,9 +2208,8 @@
         </ul>
       </div>
     </div>
-  </div>
-
-  <div id="modalTransactionExchange" class="screenModalDynamic">
+  </div>  
+    <div id="modalTransactionExchange" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalTransactionExchange"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2318,7 +2343,7 @@
     </div>
   </div>
 
-  <div id="modalPreloader" class="screenModalDynamic">
+    <div id="modalPreloader" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalPreloader"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2353,8 +2378,7 @@
       </div>
     </div>
   </div>
-
-  <div id="modalHelp" class="screenModalDynamic">
+    <div id="modalHelp" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalHelp"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2382,7 +2406,7 @@
       </div>
     </div>
   </div>
-  <div id="modalGithub" class="screenModalDynamic">
+    <div id="modalGithub" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalGithub"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2406,7 +2430,7 @@
       </div>
     </div>
   </div>
-  <div id="modalDiscord" class="screenModalDynamic">
+    <div id="modalDiscord" class="screenModalDynamic">
     <a class="modalClose" data-modal-hide="modalDiscord"></a>
     <div class="contentModal widthMiddle">
       <div class="header modalHeader">
@@ -2433,6 +2457,5 @@
   </div>
 
 </div>
-
 </body>
 </html>
