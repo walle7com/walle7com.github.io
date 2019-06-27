@@ -124,15 +124,20 @@
 				  <h2 class="title">Let's Started!</h2>
         </div>
         <div class="row">
-          <a data-view-show="screenSignup" class="button-deep-normal row-wide">
+          <a data-view-show="screenLogin" class="button-deep-normal row-wide">
+            <h3>Login to Test Account</h3>
+          </a>
+        </div>
+        <div class="row">
+          <a data-view-show="screenSignup" class="button row-wide">
             <h3>Create Walle7</h3>
           </a>
         </div>
-				<div class="row">
+        <div class="row">
           <a data-view-show="screenLogin" class="button row-wide">
-            <h3>Login without password</h3>
+            <h3>Login with BitShares</h3>
           </a>
-				</div>
+        </div>
 			</div>
 		</div>
 	</div>
@@ -283,7 +288,7 @@
 	</div>
  	<div id="modalPinExit" class="screenModal">
     <a class="modalClose" data-modal-hide="modalPinExit"></a>
-		<div class="contentModal screenInBottom widthNarrow text-center">
+		<div class="contentModal contentModalShadow screenInBottom widthNarrow text-center">
 			<div><p>Do you really want to logout? This will remove your pin code, and you will have to create it again.</p></div>
 			<a id="pinShowLogin" class="modalLine text-red">Yes, clear</a>
 			<a data-modal-hide="modalPinExit" class="modalLine">Cancel</a>
@@ -294,7 +299,7 @@
 
   <div class="header main">
     <a class="ic-title-logo"></a>
-    <h2 class="lh-56">Walle7</h2>
+    <h2 class="lh-56" data-user>Walle7</h2>
     <a class="ic-title-lock" data-view-show="screenPin"></a>
     <a class="ic-title-settings" data-modal-show="modalSettings"></a>
   </div>
@@ -323,14 +328,14 @@
         </h3>
       </div>
       <div class="row">
-        <a class="button row-wide" data-multi-view-modal-show="modalDepositCoins" data-view-show2="main">
-          <h3>Receive Funds</h3>
-        </a>
-        <a class="button row-half left" data-multi-view-modal-show="modalExchangeCoins" data-view-show2="main">
-          <h3>Exchange</h3>
+        <a class="button row-half left" data-multi-view-modal-show="modalDepositCoins" data-view-show2="main">
+          <h3>Receive</h3>
         </a>
         <a class="button row-half right" data-multi-view-modal-show="modalWithdrawCoins" data-view-show2="main">
-          <h3>Withdraw</h3>
+          <h3>Send</h3>
+        </a>
+        <a class="button row-wide" data-multi-view-modal-show="modalExchangeCoins" data-view-show2="main">
+          <h3>Exchange</h3>
         </a>
       </div>
       <div class="row up-3 title">
@@ -564,7 +569,7 @@
                 <i class="hover" data-name="">App version</i>
               </h5>
               <h5 class="absolute-top-right">
-                <i class="text-grey">19.05.2</i>
+                <i class="text-grey">19.06.3</i>
               </h5>
             </div>
           </li>
@@ -574,7 +579,7 @@
                 <i class="hover" data-name="">Build on</i>
               </h5>
               <h5 class="absolute-top-right">
-                <i class="text-grey">10 May 2019</i>
+                <i class="text-grey">27 Jun 2019</i>
               </h5>
             </div>
           </li>
@@ -632,10 +637,10 @@
             </li>
             <li class="button" data-action-transfer data-modal-arg data-multi-view-modal-show="modalWithdrawCoins" data-view-show2="withdraw">
               <div class="row">
-                <h4>Withdraw</h4>
+                <h4>Send</h4>
               </div>
               <div class="row">
-                <h5 class="text-grey">Send <i data-symbol>BTC</i></h5>
+                <h5 class="text-grey">From Wallet</h5>
               </div>
             </li>
           </ul>
@@ -1009,7 +1014,7 @@
 
                 <div data-view="main">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Deposit</h2>
+            <h2 class="lh-56">Receive</h2>
           </div>
           <div class="row up-14">
             <input type="text" data-coin-search spellcheck="false" class="input row-wide absolute-input-right" placeholder="Search" value="" />
@@ -1027,7 +1032,7 @@
         </div>
                 <div data-view="selectWallet">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Deposit to Wallet</h2>
+            <h2 class="lh-56">Receive to Wallet</h2>
           </div>
           <div class="row title">
             <h3>Select <i data-symbol>Ethereum</i> Wallet</h3>
@@ -1059,7 +1064,7 @@
         </div>
                 <div data-view="deposit">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Deposit <i data-name>Ethereum</i></h2>
+            <h2 class="lh-56">Receive <i data-name>Ethereum</i></h2>
           </div>
           <div class="row">
             <div class="row title">
@@ -1123,11 +1128,11 @@
                   </div>
                   <div class="row">
                     <h5>
-                      <i data-fee>0</i> 
+                      <i data-fee>0.00</i> 
                       <i class="text-grey" data-symbol>BTC</i>
                     </h5>
                     <h5 class="absolute-top-right">
-                      <i class="text-grey">0</i> 
+                      <i class="text-grey">0.00</i> 
                       <i class="text-grey">USD</i>
                     </h5>
                   </div>
@@ -1140,7 +1145,7 @@
                     <a class="absolute-bottom-h3 ic-24ar ic-info" data-modal-show="modalHelp"></a>
                   </div>
                   <div class="row">
-                    <h5>Sending less than <i data-min-amount>0.0018</i> <i data-symbol>BTC</i> or other asset to your wallet may result in loss of deposit.</h5>
+                    <h5>Sending less than <i data-min-amount>0.0018</i> <i data-symbol>BTC</i> or other asset to wallet may result in loss.</h5>
                     <h5 class="row up-4">Transaction status tracks on the <a class="text-bold link" data-explorer-link target="_blank">Blockchain Explorer</a>. Deposit is secured by <i data-wallet-name>Openledger</i>.</h5>
                   </div>
                 </li>
@@ -1153,7 +1158,26 @@
             </div>
           </div>
         </div>
-
+                <div data-view="maintenance">
+          <div data-view-title="" style="display:none">
+            <h2 class="lh-56">Under Maintenance</h2>
+          </div>
+          <div class="row image-width">
+            <img src="i/i_maintenance.png">
+          </div>
+          <div class="row up-1">
+            <h3 class=" text-center">Deposit is Under Maintenance</h3>
+          </div>
+          <div class="row">
+            <p><span data-asset-symbol>HPB</span> gateway is temporarily disabled. For details please see <a href="#" class="text-bold link" target="_blank" data-gateway-news>work schedule</a>.</p>
+            <p>This wallet is served by <a href="#" class="text-bold link" target="_blank" data-gateway>Bitspark</a> gateway. If you have an unconfirmed transaction associated with this wallet, we recommend filling out the form in the gateway <a href="#" class="text-bold link" target="_blank" data-gateway-support>Support service</a>.</p>
+          </div>
+          <div class="row up-3">
+            <a class="button-deep row-wide" data-modal-hide="modalDepositCoins">
+              <h3>Close</h3>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div> 
@@ -1240,7 +1264,7 @@
             <p>If suddenly Beet is not turned on, then unlock it and click on the Resend button.</p>
           </div>
           <div class="row up-6">
-            <a class="button" data-beet-send-button>
+            <a class="button-deep row-wide" data-beet-send-button>
               <h3>Send Request</h3>
             </a>
           </div>
@@ -1303,6 +1327,31 @@
             </ul>
           </div>
           <div class="row up-4">
+            <a class="button-deep row-wide" data-modal-hide="modalExchangeCoins">
+              <h3>Close</h3>
+            </a>
+          </div>
+        </div>
+                <div data-view="illiquid">
+          <div data-view-title="" style="display:none">
+            <h2 class="lh-56">Unliquid Market</h2>
+          </div>
+          <div class="modal-state">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="svg-media">
+              <circle class="path circle" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="64" cy="64" r="60"></circle>
+              <line class="path line" fill="none" stroke="#C83030" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="40" y1="40" x2="88" y2="88"></line>
+              <line class="path line" fill="none" stroke="#C83030" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="88" y1="40" x2="40" y2="88"></line>
+            </svg> 
+          </div>
+          <div class="row up-1">
+            <h3 class=" text-center">Impossible to Exchange</h3>
+          </div>
+          <div class="row">
+            <p>Oops! 😶</p>
+            <p>It seems that this exchange direction is not available. It is usually due to the unpopularity of the market.</p>
+            <p>If you want to make an exchange, we recommend using <a href="https://wallet.bitshares.org" class="text-bold link" target="_blank">BitShares DEX</a> interface. There you can place an order for the transaction.</p>
+          </div>
+          <div class="row up-3">
             <a class="button-deep row-wide" data-modal-hide="modalExchangeCoins">
               <h3>Close</h3>
             </a>
@@ -1530,11 +1579,13 @@
             <input data-password-input type="text" placeholder="Password" class="input row-wide hide-password" spellcheck="false" />
           </div>
           <div class="row up-4">
-            <a class="button row-half left margin0" data-multi-view-modal-show="modalExchangeCoins" data-view-show2="beet" data-modal-arg>
-              <h3>Beet</h3>
-            </a>
-            <a data-exchange-button data-modal-arg class="button-deep row-half right margin0">
+            <a data-exchange-button data-modal-arg class="button-deep row-wide">
               <h3>Confirm</h3>
+            </a>
+          </div>
+          <div class="row up-3">
+            <a data-multi-view-modal-show="modalExchangeCoins" data-view-show2="beet" data-modal-arg class="ic-beet row text-center">
+              <h5>Accept in Beet</h5>
             </a>
           </div>
         </div>
@@ -1559,24 +1610,34 @@
               </div>
               <div class="row up-4">
                 <h5>
-                  <i class="text-grey">Min.</i> 
-                  <i class="text-underline" data-min-amount>0.0006</i> 
+                  <i class="text-grey">Min:</i> 
+                  <i class="text-dashed" data-min-amount>0.0006</i> 
                   <i class="text-grey" data-sell-symbol>BTC</i>
                 </h5>
-                <h5 class="absolute-top-right">
-                  <i class="text-grey">Max.</i> 
-                  <i class="text-underline" data-max-amount>0.059</i> 
-                  <i class="text-grey" data-sell-symbol>BTC</i>
-                </h5>
+                <span class="op active" data-liquidity-box>
+                  <h5 class="absolute-top-right">
+                    <i class="text-grey">Liquid to</i> 
+                    <i class="text-dashed" data-liquid-amount>0.059</i>
+                  </h5>
+                </span>
+                <span class="op" data-liquidity-warn>
+                  <h5 class="absolute-top-right text-red">Low liquid market!</h5>
+                </span>
+                <span class="op" data-max-box>
+                  <h5 class="absolute-top-right">
+                    <i class="text-grey">Max:</i> 
+                    <i class="text-dashed" data-max-amount>0.059</i>
+                  </h5>
+                </span>
               </div>
             </div>
             <div class="row title up-4">
-              <h3>Average you get <i data-buy-symbol>ETH</i></h3>
+              <h3>Minimum you get <i data-buy-symbol>ETH</i></h3>
               <a class="absolute-bottom-h2 ic-24ar ic-info" data-modal-show="modalHelp"></a>
             </div>
             <div class="row up-13">
               <div class="row">
-                <input type="text" spellcheck="false" class="absolute-input-right input row-wide" placeholder="0.0" value="" data-buy-amount-input />
+                <input type="text" spellcheck="false" class="absolute-input-right input row-wide cursor-default" placeholder="0.0" value="" data-buy-amount-input readonly />
                 <div class="absolute-input-right">
                   <h5 class="input-h5 text-grey">
                     <i data-usd-buy-amount>0.00</i>
@@ -1659,8 +1720,7 @@
             </div>
           </li>
         </div>
-
-	        <div data-view="beet">
+                <div data-view="beet">
           <div data-view-title style="display:none">
             <h2 class="lh-56">Accept in Beet</h2>
           </div>
@@ -1683,7 +1743,7 @@
         </div>
                 <div data-view="verify">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Confirm Withdraw</h2>
+            <h2 class="lh-56">Confirm Sending</h2>
           </div>
           <div class="modal-state">
             <img src="i/ic_confirm.png" class="svg-media" />
@@ -1791,7 +1851,7 @@
           </div>
           <div class="row up-4">        
             <p class="text-grey">We remind you that Walle7 is a UI for the BitShares Blockchain and all operations take place inside the decentralized nodes.</p>
-            <p class="text-grey">After successful deposit to your account with any supported coin you will be able to withdraw or exchange them.</p>
+            <p class="text-grey">After successful deposit to your account with any supported coin you will be able to send or exchange them.</p>
           </div>
           <div class="row up-3">
             <a class="button-deep row-wide" data-modal-hide="modalWithdrawCoins">
@@ -1811,7 +1871,7 @@
             </svg> 
           </div>
           <div class="row up-1">
-            <h3 class=" text-center">Unable to withdraw</h3>
+            <h3 class=" text-center">Unable to send</h3>
           </div>
           <div class="row">
             <p>Seems that the balance of this wallet is insufficient for making an external withdrawal.</p>
@@ -1839,7 +1899,7 @@
               <li class="ic-fee">
                 <div class="row">
                   <h3>
-                    <i>Withdraw Fee</i>
+                    <i>Sending Fee</i>
                   </h3>
                   <a class="absolute-bottom-h3 ic-24ar ic-info" data-modal-show="modalHelp"></a>
                 </div>
@@ -1873,7 +1933,7 @@
             </svg> 
           </div>
           <div class="row up-1">
-            <h3 class=" text-center">Withdrawal completed!</h3>
+            <h3 class=" text-center">Sending completed!</h3>
           </div>
           <div class="row up-3">
             <ul class="items items-3 ic-24b">
@@ -1936,10 +1996,10 @@
             </svg>
           </div>
           <div class="row up-1">
-            <h3 class=" text-center">Withdraw failed!</h3>
+            <h3 class=" text-center">Sending failed!</h3>
           </div>
           <div class="row">
-            <p>Unfortunately, an error occurred and the withdraw did not take place.</p>
+            <p>Unfortunately, an error occurred and the sending did not take place.</p>
             <p>This is a rather rare problem and if you repeat it, then please let us know about it in our <a class="text-bold link" data-modal-show="modalDiscord">Discord chat</a> and we will fix it.</p>
             <p>In order to complete the transfer please restart the application and try it again.</p>
           </div>
@@ -1949,9 +2009,29 @@
             </a>
           </div>
         </div>
+                <div data-view="maintenance">
+          <div data-view-title="" style="display:none">
+            <h2 class="lh-56">Under Maintenance</h2>
+          </div>
+          <div class="row image-width">
+            <img src="i/i_maintenance.png">
+          </div>
+          <div class="row up-1">
+            <h3 class=" text-center">Withdraw is Under Maintenance</h3>
+          </div>
+          <div class="row">
+            <p><span data-asset-symbol>HPB</span> gateway is temporarily disabled. For details please see <a href="#" class="text-bold link" target="_blank" data-gateway-news>work schedule</a>.</p>
+            <p>This wallet is served by <a href="#" class="text-bold link" target="_blank" data-gateway>Bitspark</a> gateway. If you have an unconfirmed transaction associated with this wallet, we recommend filling out the form in the gateway <a href="#" class="text-bold link" target="_blank" data-gateway-support>Support service</a>.</p>
+          </div>
+          <div class="row up-3">
+            <a class="button-deep row-wide" data-modal-hide="modalWithdrawCoins">
+              <h3>Close</h3>
+            </a>
+          </div>
+        </div>
                 <div data-view="main">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Withdraw</h2>
+            <h2 class="lh-56">Send</h2>
           </div>
           <div class="row up-14">
             <input type="text" data-coin-search spellcheck="false" class="input row-wide absolute-input-right" placeholder="Search" value="" />
@@ -1969,7 +2049,7 @@
         </div>
                 <div data-view="selectWallet">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Withdraw from Wallet</h2>
+            <h2 class="lh-56">Send from Wallet</h2>
           </div>
           <div class="row title">
             <h3>Select <i data-symbol>Ethereum</i> Wallet</h3>
@@ -2001,7 +2081,7 @@
         </div>
                 <div data-view="withdraw">
           <div data-view-title style="display:none">
-            <h2 class="lh-56">Withdraw <i data-name>Ethereum</i></h2>
+            <h2 class="lh-56">Send <i data-name>Ethereum</i></h2>
           </div>
           <div class="row title">
             <h3>Send <i data-symbol>BTC</i> to address</h3>
@@ -2029,12 +2109,12 @@
             <div class="row up-4">
               <h5>
                 <i class="text-grey">Min.</i> 
-                <i class="text-underline" data-min-amount>0.0006</i> 
+                <i class="text-dashed" data-min-amount>0.0006</i> 
                 <i class="text-grey" data-symbol>BTC</i>
               </h5>
               <h5 class="absolute-top-right">
                 <i class="text-grey">Max.</i> 
-                <i class="text-underline" data-max-amount>0.059</i> 
+                <i class="text-dashed" data-max-amount>0.059</i> 
                 <i class="text-grey" data-symbol>BTC</i>
               </h5>
             </div>
@@ -2069,7 +2149,7 @@
                 <div class="row">
                   <h5>
                     <i data-service-fee>0</i> 
-                    <i class="text-grey" data-symbol>BTC</i>
+                    <i class="text-grey" data-fee-symbol>BTC</i>
                   </h5>
                   <h5 class="absolute-top-right">
                     <i class="text-grey" data-usd-service-fee>0</i> 
@@ -2085,7 +2165,6 @@
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </div> 
