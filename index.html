@@ -569,7 +569,7 @@
                 <i class="hover" data-name="">App version</i>
               </h5>
               <h5 class="absolute-top-right">
-                <i class="text-grey">19.07.1</i>
+                <i class="text-grey">19.08.1</i>
               </h5>
             </div>
           </li>
@@ -579,7 +579,7 @@
                 <i class="hover" data-name="">Build on</i>
               </h5>
               <h5 class="absolute-top-right">
-                <i class="text-grey">15 Jul 2019</i>
+                <i class="text-grey">6 Aug 2019</i>
               </h5>
             </div>
           </li>
@@ -1831,7 +1831,7 @@
             <input data-password-input type="text" placeholder="Password" class="absolute-badge-right input row-wide hide-password" spellcheck="false" />
           </div>
           <div class="row up-4">
-<!--        <a class="button row-half left margin0" data-multi-view-modal-show="modalWithdrawCoins" data-view-show2="beet" data-modal-arg>
+<!--         <a class="button row-half left margin0" data-multi-view-modal-show="modalWithdrawCoins" data-view-show2="beet" data-modal-arg>
               <h3>Beet</h3>
             </a> -->
             <a data-withdraw-button data-modal-arg class="button-deep row-wide">
@@ -2091,8 +2091,15 @@
             <div class="row">
               <input type="text" spellcheck="false" class="input row-wide absolute-input-right" placeholder="Paste address" value="" data-address-input />
               <div class="absolute-input-right">
-                <span class="areaBadge areaError op" data-invalid-address></span>
-                <span class="areaBadge areaValid op" data-valid-address></span>
+                <span class="areaBadge areaError op fade-in" data-invalid-address></span>
+                <span class="areaBadge areaValid op fade-in c-9 selected" data-valid-bts-address>
+                  <span class="icoin"></span>
+                </span>
+                <span class="areaBadge areaValid op fade-in" data-valid-ext-address>
+                  <span class="c1" data-id>
+                    <span class="icoin"></span>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -2113,7 +2120,7 @@
             <div class="row up-4">
               <h5>
                 <i class="text-grey">Min.</i> 
-                <i class="text-dashed" data-min-amount>0.0006</i> 
+                <i class="text-dashed" data-min-amount>0.0006</i>
                 <i class="text-grey" data-symbol>BTC</i>
               </h5>
               <h5 class="absolute-top-right">
